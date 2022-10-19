@@ -7,11 +7,11 @@ class Unsolvable(Exception):
         self.message = message
 
     def __str__(self):
-        return message
+        return self.message
 
 
 def LU(A: np.ndarray
-      ) -> Tuple[np.ndarray, np.ndarray]:
+       ) -> Tuple[np.ndarray, np.ndarray]:
     m, n = A.shape
     assert m == n, "The matrix should be square"
     L = np.identity(n, dtype=float)
@@ -26,9 +26,8 @@ def LU(A: np.ndarray
     return L, A
 
 
-A = np.array([[2, 4, -4],[1, -4, 3],[-6, -9, 5]], dtype=float)
+A = np.array([[2, 4, -4], [1, -4, 3], [-6, -9, 5]], dtype=float)
 L, U = LU(A)
 print(L)
 print(U)
 print(L@U)
-

@@ -48,7 +48,6 @@ A = np.array([
               [-4, 7, -2],
               [1, -2, 3],
               [2, -3, 1]],
-              dtype=float)
+             dtype=float)
 b = np.array([2, 3, -4], dtype=float)
 print(gaussian_elimination(A, b))
-

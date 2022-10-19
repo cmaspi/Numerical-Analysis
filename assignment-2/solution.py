@@ -198,7 +198,6 @@ def newtonRaphson(func: Callable[[float], float],
 
     if iter == MAX_ITER:
         raise MaxIterationError("Max Number of iterations exceeded!")
-
     return curr
 
 

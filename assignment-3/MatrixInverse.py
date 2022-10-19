@@ -2,7 +2,7 @@ import numpy as np
 from copy import deepcopy
 
 
-def matmul(A:np.ndarray, B:np.ndarray) -> np.ndarray:
+def matmul(A: np.ndarray, B: np.ndarray) -> np.ndarray:
     res = np.zeros((A.shape[0], B.shape[1]))
     for i, row in enumerate(A):
         for j, column in enumerate(zip(*B)):
